@@ -18,8 +18,34 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving org.scalariform#sbt-scalariform;1.6.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalariform#sbt-scalariform;1.6.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scalariform#sbt-scalariform;1.6.0[0m
-[0m[[0mdebug[0m] [0m	found org.scalariform#sbt-scalariform;1.6.0 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving org.scalariform#sbt-scalariform;1.6.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scalariform#sbt-scalariform;1.6.0 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/sbt-scalariform/scala_2.10/sbt_0.13/1.6.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/sbt-scalariform/scala_2.10/sbt_0.13/1.6.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.scalariform#sbt-scalariform;1.6.0[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/sbt-scalariform/scala_2.10/sbt_0.13/1.6.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/sbt-scalariform/scala_2.10/sbt_0.13/1.6.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.scalariform#sbt-scalariform;1.6.0[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/org.scalariform/sbt-scalariform/scala_2.10/sbt_0.13/1.6.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scalariform#sbt-scalariform;1.6.0[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalariform/sbt-scalariform_2.10_0.13/1.6.0/sbt-scalariform-1.6.0.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.scalariform#sbt-scalariform;1.6.0[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scalariform/sbt-scalariform_2.10_0.13/1.6.0/sbt-scalariform-1.6.0.pom (1.6.0)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalariform/sbt-scalariform_2.10_0.13/1.6.0/sbt-scalariform-1.6.0.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalariform/sbt-scalariform_2.10_0.13/1.6.0/sbt-scalariform-1.6.0.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalariform/sbt-scalariform_2.10_0.13/1.6.0/sbt-scalariform-1.6.0.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalariform/sbt-scalariform_2.10_0.13/1.6.0/sbt-scalariform-1.6.0.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalariform#sbt-scalariform;1.6.0!sbt-scalariform.pom(pom.original) (162ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/sbt-scalariform/1.6.0/jars/sbt-scalariform.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/sbt-scalariform/1.6.0/jars/sbt-scalariform.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/sbt-scalariform/1.6.0/jars/sbt-scalariform.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/sbt-scalariform/1.6.0/jars/sbt-scalariform.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/org.scalariform/sbt-scalariform/1.6.0/jars/sbt-scalariform.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalariform/sbt-scalariform/1.6.0/sbt-scalariform-1.6.0.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/org/scalariform/sbt-scalariform/1.6.0/sbt-scalariform-1.6.0.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.sbt/preloaded/org.scalariform/sbt-scalariform/1.6.0/jars/sbt-scalariform.jar[0m
+[0m[[0mdebug[0m] [0m		tried file:////Users/eperinan/.sbt/preloaded/org/scalariform/sbt-scalariform/1.6.0/sbt-scalariform-1.6.0.jar[0m
+[0m[[0mdebug[0m] [0m	found org.scalariform#sbt-scalariform;1.6.0 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#todolist-akka-training-exercise-build;0.1-SNAPSHOT->org.scalariform#sbt-scalariform;1.6.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#todolist-akka-training-exercise-build;0.1-SNAPSHOT->org.scalariform#sbt-scalariform;1.6.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]}[0m
@@ -33,8 +59,31 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving org.scalariform#scalariform_2.10;0.1.8 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalariform#scalariform_2.10;0.1.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scalariform#scalariform_2.10;0.1.8[0m
-[0m[[0mdebug[0m] [0m	found org.scalariform#scalariform_2.10;0.1.8 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving org.scalariform#scalariform_2.10;0.1.8 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scalariform#scalariform_2.10;0.1.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/scalariform_2.10/0.1.8/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/scalariform_2.10/0.1.8/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.scalariform#scalariform_2.10;0.1.8[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/scalariform_2.10/0.1.8/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/scalariform_2.10/0.1.8/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.scalariform#scalariform_2.10;0.1.8[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/org.scalariform/scalariform_2.10/0.1.8/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scalariform#scalariform_2.10;0.1.8[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.8/scalariform_2.10-0.1.8.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.scalariform#scalariform_2.10;0.1.8[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.8/scalariform_2.10-0.1.8.pom (0.1.8)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.8/scalariform_2.10-0.1.8.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.8/scalariform_2.10-0.1.8.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.8/scalariform_2.10-0.1.8.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.8/scalariform_2.10-0.1.8.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalariform#scalariform_2.10;0.1.8!scalariform_2.10.pom(pom.original) (249ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/scalariform_2.10/0.1.8/jars/scalariform_2.10.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scalariform/scalariform_2.10/0.1.8/jars/scalariform_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/scalariform_2.10/0.1.8/jars/scalariform_2.10.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scalariform/scalariform_2.10/0.1.8/jars/scalariform_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/org.scalariform/scalariform_2.10/0.1.8/jars/scalariform_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.8/scalariform_2.10-0.1.8.jar[0m
+[0m[[0mdebug[0m] [0m	found org.scalariform#scalariform_2.10;0.1.8 in public[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalariform#sbt-scalariform;1.6.0->org.scalariform#scalariform_2.10;0.1.8 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -73,8 +122,20 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.thesamet#sbt-protoc;0.99.11 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.thesamet#sbt-protoc;0.99.11 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.thesamet#sbt-protoc;0.99.11[0m
-[0m[[0mdebug[0m] [0m	found com.thesamet#sbt-protoc;0.99.11 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.thesamet#sbt-protoc;0.99.11 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.thesamet#sbt-protoc;0.99.11 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.11/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.11/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for com.thesamet#sbt-protoc;0.99.11[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.11/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: found md file for com.thesamet#sbt-protoc;0.99.11[0m
+[0m[[0mdebug[0m] [0m		=> https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.11/ivys/ivy.xml (0.99.11)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.11/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.11/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.11/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.11/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.thesamet#sbt-protoc;0.99.11!ivy.xml(ivy.original) (1899ms)[0m
+[0m[[0mdebug[0m] [0m	found com.thesamet#sbt-protoc;0.99.11 in sbt-plugin-releases[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.thesamet#sbt-protoc;0.99.11->com.github.os72#protoc-jar;3.3.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
@@ -83,8 +144,34 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.github.os72#protoc-jar;3.3.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.os72#protoc-jar;3.3.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.os72#protoc-jar;3.3.0[0m
-[0m[[0mdebug[0m] [0m	found com.github.os72#protoc-jar;3.3.0 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.github.os72#protoc-jar;3.3.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.github.os72#protoc-jar;3.3.0 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.github.os72/protoc-jar/3.3.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.github.os72/protoc-jar/3.3.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for com.github.os72#protoc-jar;3.3.0[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.github.os72/protoc-jar/3.3.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.github.os72/protoc-jar/3.3.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for com.github.os72#protoc-jar;3.3.0[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/com.github.os72/protoc-jar/3.3.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.github.os72#protoc-jar;3.3.0[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.3.0/protoc-jar-3.3.0.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.github.os72#protoc-jar;3.3.0[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.3.0/protoc-jar-3.3.0.pom (3.3.0)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.3.0/protoc-jar-3.3.0.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.3.0/protoc-jar-3.3.0.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.3.0/protoc-jar-3.3.0.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.3.0/protoc-jar-3.3.0.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.os72#protoc-jar;3.3.0!protoc-jar.pom(pom.original) (131ms)[0m
+[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;9 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;9 {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;9[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.github.os72/protoc-jar/3.3.0/jars/protoc-jar.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.github.os72/protoc-jar/3.3.0/jars/protoc-jar.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.github.os72/protoc-jar/3.3.0/jars/protoc-jar.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.github.os72/protoc-jar/3.3.0/jars/protoc-jar.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/com.github.os72/protoc-jar/3.3.0/jars/protoc-jar.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.3.0/protoc-jar-3.3.0.jar[0m
+[0m[[0mdebug[0m] [0m	found com.github.os72#protoc-jar;3.3.0 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.thesamet#sbt-protoc;0.99.11->com.github.os72#protoc-jar;3.3.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.thesamet#sbt-protoc;0.99.11->com.github.os72#protoc-jar;3.3.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.thesamet#sbt-protoc;0.99.11->com.github.os72#protoc-jar;3.3.0 [compile->master][0m
@@ -95,8 +182,31 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7[0m
-[0m[[0mdebug[0m] [0m	found com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.trueaccord.scalapb/protoc-bridge_2.10/0.2.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.trueaccord.scalapb/protoc-bridge_2.10/0.2.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.trueaccord.scalapb/protoc-bridge_2.10/0.2.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.trueaccord.scalapb/protoc-bridge_2.10/0.2.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/com.trueaccord.scalapb/protoc-bridge_2.10/0.2.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.2.7/protoc-bridge_2.10-0.2.7.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.2.7/protoc-bridge_2.10-0.2.7.pom (0.2.7)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.2.7/protoc-bridge_2.10-0.2.7.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.2.7/protoc-bridge_2.10-0.2.7.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.2.7/protoc-bridge_2.10-0.2.7.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.2.7/protoc-bridge_2.10-0.2.7.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7!protoc-bridge_2.10.pom(pom.original) (106ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.trueaccord.scalapb/protoc-bridge_2.10/0.2.7/jars/protoc-bridge_2.10.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.trueaccord.scalapb/protoc-bridge_2.10/0.2.7/jars/protoc-bridge_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.trueaccord.scalapb/protoc-bridge_2.10/0.2.7/jars/protoc-bridge_2.10.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.trueaccord.scalapb/protoc-bridge_2.10/0.2.7/jars/protoc-bridge_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/com.trueaccord.scalapb/protoc-bridge_2.10/0.2.7/jars/protoc-bridge_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.2.7/protoc-bridge_2.10-0.2.7.jar[0m
+[0m[[0mdebug[0m] [0m	found com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.thesamet#sbt-protoc;0.99.11->com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.thesamet#sbt-protoc;0.99.11->com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7 [compile->compile][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -121,8 +231,89 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.google.protobuf#protobuf-java;3.3.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.google.protobuf#protobuf-java;3.3.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.google.protobuf#protobuf-java;3.3.1[0m
-[0m[[0mdebug[0m] [0m	found com.google.protobuf#protobuf-java;3.3.1 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.google.protobuf#protobuf-java;3.3.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.google.protobuf#protobuf-java;3.3.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.google.protobuf/protobuf-java/3.3.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.google.protobuf/protobuf-java/3.3.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for com.google.protobuf#protobuf-java;3.3.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.google.protobuf/protobuf-java/3.3.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.google.protobuf/protobuf-java/3.3.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for com.google.protobuf#protobuf-java;3.3.1[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/com.google.protobuf/protobuf-java/3.3.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.google.protobuf#protobuf-java;3.3.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.3.1/protobuf-java-3.3.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.google.protobuf#protobuf-java;3.3.1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.3.1/protobuf-java-3.3.1.pom (3.3.1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.3.1/protobuf-java-3.3.1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.3.1/protobuf-java-3.3.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.3.1/protobuf-java-3.3.1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.3.1/protobuf-java-3.3.1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.google.protobuf#protobuf-java;3.3.1!protobuf-java.pom(pom.original) (117ms)[0m
+[0m[[0minfo[0m] [0mResolving com.google.protobuf#protobuf-parent;3.3.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.google.protobuf#protobuf-parent;3.3.1 {}[0m
+[0m[[0minfo[0m] [0mResolving com.google.protobuf#protobuf-parent;3.3.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.google.protobuf#protobuf-parent;3.3.1 {}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.google.protobuf/protobuf-parent/3.3.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.google.protobuf/protobuf-parent/3.3.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for com.google.protobuf#protobuf-parent;3.3.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.google.protobuf/protobuf-parent/3.3.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.google.protobuf/protobuf-parent/3.3.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for com.google.protobuf#protobuf-parent;3.3.1[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/com.google.protobuf/protobuf-parent/3.3.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.google.protobuf#protobuf-parent;3.3.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.google.protobuf#protobuf-parent;3.3.1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.pom (3.3.1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.google.protobuf#protobuf-parent;3.3.1!protobuf-parent.pom(pom.original) (100ms)[0m
+[0m[[0minfo[0m] [0mResolving com.google#google;1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.google#google;1 {}[0m
+[0m[[0minfo[0m] [0mResolving com.google#google;1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.google#google;1 {}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.google/google/1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.google/google/1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for com.google#google;1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.google/google/1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.google/google/1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for com.google#google;1[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/com.google/google/1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.google#google;1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/google/google/1/google-1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.google#google;1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/google/google/1/google-1.pom (1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/google/google/1/google-1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/google/1/google-1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/google/1/google-1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/google/google/1/google-1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.google#google;1!google.pom(pom.original) (99ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.google/google/1/jars/google.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.google/google/1/jars/google.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.google/google/1/jars/google.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.google/google/1/jars/google.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/com.google/google/1/jars/google.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/google/google/1/google-1.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/com/google/google/1/google-1.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.sbt/preloaded/com.google/google/1/jars/google.jar[0m
+[0m[[0mdebug[0m] [0m		tried file:////Users/eperinan/.sbt/preloaded/com/google/google/1/google-1.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.google.protobuf/protobuf-parent/3.3.1/jars/protobuf-parent.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.google.protobuf/protobuf-parent/3.3.1/jars/protobuf-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.google.protobuf/protobuf-parent/3.3.1/jars/protobuf-parent.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.google.protobuf/protobuf-parent/3.3.1/jars/protobuf-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/com.google.protobuf/protobuf-parent/3.3.1/jars/protobuf-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.sbt/preloaded/com.google.protobuf/protobuf-parent/3.3.1/jars/protobuf-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried file:////Users/eperinan/.sbt/preloaded/com/google/protobuf/protobuf-parent/3.3.1/protobuf-parent-3.3.1.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.google.protobuf/protobuf-java/3.3.1/bundles/protobuf-java.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.google.protobuf/protobuf-java/3.3.1/bundles/protobuf-java.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.google.protobuf/protobuf-java/3.3.1/bundles/protobuf-java.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.google.protobuf/protobuf-java/3.3.1/bundles/protobuf-java.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/com.google.protobuf/protobuf-java/3.3.1/bundles/protobuf-java.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.3.1/protobuf-java-3.3.1.jar[0m
+[0m[[0mdebug[0m] [0m	found com.google.protobuf#protobuf-java;3.3.1 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7->com.google.protobuf#protobuf-java;3.3.1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7->com.google.protobuf#protobuf-java;3.3.1 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7->com.google.protobuf#protobuf-java;3.3.1 [compile->compile][0m
@@ -138,8 +329,89 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving commons-io#commons-io;2.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: commons-io#commons-io;2.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: commons-io#commons-io;2.5[0m
-[0m[[0mdebug[0m] [0m	found commons-io#commons-io;2.5 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving commons-io#commons-io;2.5 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: commons-io#commons-io;2.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/commons-io/commons-io/2.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/commons-io/commons-io/2.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for commons-io#commons-io;2.5[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/commons-io/commons-io/2.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/commons-io/commons-io/2.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for commons-io#commons-io;2.5[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/commons-io/commons-io/2.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for commons-io#commons-io;2.5[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for commons-io#commons-io;2.5[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.pom (2.5)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] commons-io#commons-io;2.5!commons-io.pom(pom.original) (109ms)[0m
+[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-parent;39 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.commons#commons-parent;39 {}[0m
+[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-parent;39 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.apache.commons#commons-parent;39 {}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.apache.commons/commons-parent/39/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.apache.commons/commons-parent/39/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.apache.commons#commons-parent;39[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.commons/commons-parent/39/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.commons/commons-parent/39/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.apache.commons#commons-parent;39[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/org.apache.commons/commons-parent/39/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache.commons#commons-parent;39[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/commons/commons-parent/39/commons-parent-39.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.apache.commons#commons-parent;39[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/apache/commons/commons-parent/39/commons-parent-39.pom (39)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/commons/commons-parent/39/commons-parent-39.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-parent/39/commons-parent-39.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-parent/39/commons-parent-39.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/commons/commons-parent/39/commons-parent-39.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-parent;39!commons-parent.pom(pom.original) (134ms)[0m
+[0m[[0minfo[0m] [0mResolving org.apache#apache;16 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache#apache;16 {}[0m
+[0m[[0minfo[0m] [0mResolving org.apache#apache;16 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.apache#apache;16 {}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.apache/apache/16/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.apache/apache/16/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.apache#apache;16[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache/apache/16/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache/apache/16/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.apache#apache;16[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/org.apache/apache/16/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache#apache;16[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/apache/16/apache-16.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.apache#apache;16[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/apache/apache/16/apache-16.pom (16)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/apache/16/apache-16.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/apache/16/apache-16.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/apache/16/apache-16.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/apache/16/apache-16.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache#apache;16!apache.pom(pom.original) (91ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.apache/apache/16/jars/apache.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.apache/apache/16/jars/apache.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache/apache/16/jars/apache.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache/apache/16/jars/apache.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/org.apache/apache/16/jars/apache.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/apache/16/apache-16.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/org/apache/apache/16/apache-16.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.sbt/preloaded/org.apache/apache/16/jars/apache.jar[0m
+[0m[[0mdebug[0m] [0m		tried file:////Users/eperinan/.sbt/preloaded/org/apache/apache/16/apache-16.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.apache.commons/commons-parent/39/jars/commons-parent.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.apache.commons/commons-parent/39/jars/commons-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.commons/commons-parent/39/jars/commons-parent.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.commons/commons-parent/39/jars/commons-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/org.apache.commons/commons-parent/39/jars/commons-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/commons/commons-parent/39/commons-parent-39.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/org/apache/commons/commons-parent/39/commons-parent-39.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.sbt/preloaded/org.apache.commons/commons-parent/39/jars/commons-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried file:////Users/eperinan/.sbt/preloaded/org/apache/commons/commons-parent/39/commons-parent-39.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/commons-io/commons-io/2.5/jars/commons-io.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/commons-io/commons-io/2.5/jars/commons-io.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/commons-io/commons-io/2.5/jars/commons-io.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/commons-io/commons-io/2.5/jars/commons-io.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/commons-io/commons-io/2.5/jars/commons-io.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.jar[0m
+[0m[[0mdebug[0m] [0m	found commons-io#commons-io;2.5 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7->commons-io#commons-io;2.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7->commons-io#commons-io;2.5 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7->commons-io#commons-io;2.5 [compile->compile][0m
@@ -158,8 +430,31 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving com.trueaccord.scalapb#compilerplugin_2.10;0.6.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.trueaccord.scalapb#compilerplugin_2.10;0.6.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.trueaccord.scalapb#compilerplugin_2.10;0.6.0[0m
-[0m[[0mdebug[0m] [0m	found com.trueaccord.scalapb#compilerplugin_2.10;0.6.0 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.trueaccord.scalapb#compilerplugin_2.10;0.6.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.trueaccord.scalapb#compilerplugin_2.10;0.6.0 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.trueaccord.scalapb/compilerplugin_2.10/0.6.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.trueaccord.scalapb/compilerplugin_2.10/0.6.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for com.trueaccord.scalapb#compilerplugin_2.10;0.6.0[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.trueaccord.scalapb/compilerplugin_2.10/0.6.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.trueaccord.scalapb/compilerplugin_2.10/0.6.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for com.trueaccord.scalapb#compilerplugin_2.10;0.6.0[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/com.trueaccord.scalapb/compilerplugin_2.10/0.6.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.trueaccord.scalapb#compilerplugin_2.10;0.6.0[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.0/compilerplugin_2.10-0.6.0.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.trueaccord.scalapb#compilerplugin_2.10;0.6.0[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.0/compilerplugin_2.10-0.6.0.pom (0.6.0)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.0/compilerplugin_2.10-0.6.0.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.0/compilerplugin_2.10-0.6.0.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.0/compilerplugin_2.10-0.6.0.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.0/compilerplugin_2.10-0.6.0.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.trueaccord.scalapb#compilerplugin_2.10;0.6.0!compilerplugin_2.10.pom(pom.original) (158ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.trueaccord.scalapb/compilerplugin_2.10/0.6.0/jars/compilerplugin_2.10.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.trueaccord.scalapb/compilerplugin_2.10/0.6.0/jars/compilerplugin_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.trueaccord.scalapb/compilerplugin_2.10/0.6.0/jars/compilerplugin_2.10.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.trueaccord.scalapb/compilerplugin_2.10/0.6.0/jars/compilerplugin_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried /Users/eperinan/.ivy2/local/com.trueaccord.scalapb/compilerplugin_2.10/0.6.0/jars/compilerplugin_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.0/compilerplugin_2.10-0.6.0.jar[0m
+[0m[[0mdebug[0m] [0m	found com.trueaccord.scalapb#compilerplugin_2.10;0.6.0 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#todolist-akka-training-exercise-build;0.1-SNAPSHOT->com.trueaccord.scalapb#compilerplugin_2.10;0.6.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#todolist-akka-training-exercise-build;0.1-SNAPSHOT->com.trueaccord.scalapb#compilerplugin_2.10;0.6.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -7161,7 +7456,7 @@
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#jline;2.10.6[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#jline;2.10.6 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#jline;2.10.6 [optional->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#jline;2.10.6->org.fusesource.jansi#jansi;1.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#jline;2.10.6->org.fusesource.jansi#jansi;1.4 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#jline;2.10.6 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#jline;2.10.6 {optional=[compile(*), master(*)]}[0m
@@ -7183,7 +7478,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.6 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.6 {scala-tool=[default, optional(default)], provided=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving org.fusesource.jansi#jansi;1.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.fusesource.jansi#jansi;1.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.fusesource.jansi#jansi;1.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4[0m
 [0m[[0mdebug[0m] [0m	found org.fusesource.jansi#jansi;1.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#jline;2.10.6->org.fusesource.jansi#jansi;1.4 [compile->compile(*)][0m
@@ -7195,15 +7490,55 @@
 [0m[[0mdebug[0m] [0mignoring unhandled DependencyDescriptorMediator: class sbt.IvyScala$OverrideScalaMediator[0m
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalariform#sbt-scalariform;1.6.0!sbt-scalariform.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.thesamet#sbt-protoc;0.99.11!sbt-protoc.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.trueaccord.scalapb#compilerplugin_2.10;0.6.0!compilerplugin_2.10.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalariform#scalariform_2.10;0.1.8!scalariform_2.10.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalariform/sbt-scalariform_2.10_0.13/1.6.0/sbt-scalariform-1.6.0.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalariform/sbt-scalariform_2.10_0.13/1.6.0/sbt-scalariform-1.6.0.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalariform/sbt-scalariform_2.10_0.13/1.6.0/sbt-scalariform-1.6.0.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalariform/sbt-scalariform_2.10_0.13/1.6.0/sbt-scalariform-1.6.0.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalariform/sbt-scalariform_2.10_0.13/1.6.0/sbt-scalariform-1.6.0.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalariform#sbt-scalariform;1.6.0!sbt-scalariform.jar (128ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.11/jars/sbt-protoc.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.11/jars/sbt-protoc.jar ...[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.11/jars/sbt-protoc.jar[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.11/jars/sbt-protoc.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.thesamet/sbt-protoc/scala_2.10/sbt_0.13/0.99.11/jars/sbt-protoc.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.thesamet#sbt-protoc;0.99.11!sbt-protoc.jar (2688ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.0/compilerplugin_2.10-0.6.0.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.0/compilerplugin_2.10-0.6.0.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.0/compilerplugin_2.10-0.6.0.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.0/compilerplugin_2.10-0.6.0.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/trueaccord/scalapb/compilerplugin_2.10/0.6.0/compilerplugin_2.10-0.6.0.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.trueaccord.scalapb#compilerplugin_2.10;0.6.0!compilerplugin_2.10.jar (196ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.8/scalariform_2.10-0.1.8.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.8/scalariform_2.10-0.1.8.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.8/scalariform_2.10-0.1.8.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.8/scalariform_2.10-0.1.8.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalariform/scalariform_2.10/0.1.8/scalariform_2.10-0.1.8.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalariform#scalariform_2.10;0.1.8!scalariform_2.10.jar (390ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.10.6!scala-library.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.github.os72#protoc-jar;3.3.0!protoc-jar.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7!protoc-bridge_2.10.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.protobuf#protobuf-java;3.3.1!protobuf-java.jar(bundle)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] commons-io#commons-io;2.5!commons-io.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.3.0/protoc-jar-3.3.0.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.3.0/protoc-jar-3.3.0.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.3.0/protoc-jar-3.3.0.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.3.0/protoc-jar-3.3.0.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/github/os72/protoc-jar/3.3.0/protoc-jar-3.3.0.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.github.os72#protoc-jar;3.3.0!protoc-jar.jar (1320ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.2.7/protoc-bridge_2.10-0.2.7.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.2.7/protoc-bridge_2.10-0.2.7.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.2.7/protoc-bridge_2.10-0.2.7.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.2.7/protoc-bridge_2.10-0.2.7.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/trueaccord/scalapb/protoc-bridge_2.10/0.2.7/protoc-bridge_2.10-0.2.7.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.trueaccord.scalapb#protoc-bridge_2.10;0.2.7!protoc-bridge_2.10.jar (157ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.3.1/protobuf-java-3.3.1.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.3.1/protobuf-java-3.3.1.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.3.1/protobuf-java-3.3.1.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.3.1/protobuf-java-3.3.1.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.3.1/protobuf-java-3.3.1.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.google.protobuf#protobuf-java;3.3.1!protobuf-java.jar(bundle) (258ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] commons-io#commons-io;2.5!commons-io.jar (136ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#sbt;0.13.13!sbt.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#main;0.13.13!main.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.13!compiler-interface.jar[0m
@@ -7257,7 +7592,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2394ms :: artifacts dl 39ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 29654ms :: artifacts dl 5327ms[0m
 [0m[[0mdebug[0m] [0m	report for default#todolist-akka-training-exercise-build;0.1-SNAPSHOT compile produced in /Users/eperinan/workspace/47deg/todolist-akka-training-exercise/project/target/resolution-cache/reports/default-todolist-akka-training-exercise-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#todolist-akka-training-exercise-build;0.1-SNAPSHOT runtime produced in /Users/eperinan/workspace/47deg/todolist-akka-training-exercise/project/target/resolution-cache/reports/default-todolist-akka-training-exercise-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#todolist-akka-training-exercise-build;0.1-SNAPSHOT test produced in /Users/eperinan/workspace/47deg/todolist-akka-training-exercise/project/target/resolution-cache/reports/default-todolist-akka-training-exercise-build-test.xml[0m
@@ -7271,5 +7606,5 @@
 [0m[[0mdebug[0m] [0m	report for default#todolist-akka-training-exercise-build;0.1-SNAPSHOT docs produced in /Users/eperinan/workspace/47deg/todolist-akka-training-exercise/project/target/resolution-cache/reports/default-todolist-akka-training-exercise-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#todolist-akka-training-exercise-build;0.1-SNAPSHOT pom produced in /Users/eperinan/workspace/47deg/todolist-akka-training-exercise/project/target/resolution-cache/reports/default-todolist-akka-training-exercise-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#todolist-akka-training-exercise-build;0.1-SNAPSHOT scala-tool produced in /Users/eperinan/workspace/47deg/todolist-akka-training-exercise/project/target/resolution-cache/reports/default-todolist-akka-training-exercise-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (2394ms resolve - 39ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (29654ms resolve - 5327ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

@@ -1,32 +1,21 @@
 package com.todolist
 
-import java.util.concurrent.TimeUnit
-
 import akka.actor.{ ActorSystem, Props }
-import akka.http.scaladsl.Http
 import akka.http.scaladsl.server.Directives
 import akka.stream.ActorMaterializer
-import akka.util.Timeout
-
-import scala.concurrent.Await
-import scala.concurrent.duration._
-import com.typesafe.config.ConfigFactory
-import com.todolist.actors.TodoListActor
-import com.todolist.commands._
-import com.todolist.routes.BaseRoutes
+import com.todolist.actors.{ ServerHttpActor, TodoListActor }
+import com.todolist.model._
 
 object Boot extends Directives {
   def main(args: Array[String]) {
 
-    val config = ConfigFactory.load()
-
-    implicit val system = ActorSystem("todolist-akka-training")
-    implicit val materializer = ActorMaterializer()
-    implicit val executionContext = system.dispatcher
-    implicit val timeout = Timeout(5, TimeUnit.SECONDS)
+    val system = ActorSystem("todolist-akka-training")
 
     // Create actors
+    val serverHttpActor = system.actorOf(Props[ServerHttpActor], "serverHttp")
     val todoListActor = system.actorOf(Props[TodoListActor], "todoList")
+
+    serverHttpActor ! StartServer
 
     // Commands
     todoListActor ! CreateTodoListCommand("Test", "Test todo list")
@@ -37,12 +26,5 @@ object Boot extends Directives {
     todoListActor ! AddTaskCommand("Test", "Task2", "Buy bread 2")
     todoListActor ! DeleteTaskCommand("Test", "Task1")
     todoListActor ! CompleteTaskCommand("Test", "Task2", true)
-
-    // Routes
-    val routes = BaseRoutes.routes
-    val bindingFuture = Http().bindAndHandle(routes, config.getString("todolist-akka-training.hostname"), config.getInt("todolist-akka-training.port"))
-
-    Await.ready(system.whenTerminated, Duration.Inf)
-
   }
 }

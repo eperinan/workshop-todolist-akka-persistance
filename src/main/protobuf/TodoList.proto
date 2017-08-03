@@ -1,0 +1,58 @@
+syntax = "proto2";
+
+import "scalapb/scalapb.proto";
+import "google/protobuf/wrappers.proto";
+
+package com.todolist.protobuf;
+
+// Events
+message TodoListCreatedEventProto {
+    option (scalapb.message).extends = "com.todolist.model.Proto";
+    required string todoListId = 1;
+    required string name = 2;
+}
+
+message TodoListDeletedEventProto {
+    option (scalapb.message).extends = "com.todolist.model.Proto";
+    required string todoListId = 1;
+}
+
+message TaskAddedEventProto {
+    option (scalapb.message).extends = "com.todolist.model.Proto";
+    required string todoListId = 1;
+    required string taskId = 2;
+    required string title = 3;
+}
+
+message TaskCompletedEventProto {
+    option (scalapb.message).extends = "com.todolist.model.Proto";
+    required string todoListId = 1;
+    required string taskId = 2;
+    required bool done = 3;
+}
+
+message TaskDeletedEventProto {
+    option (scalapb.message).extends = "com.todolist.model.Proto";
+    required string todoListId = 1;
+    required string taskId = 2;
+}
+
+// State
+message TaskProto {
+    option (scalapb.message).extends = "com.todolist.model.Proto";
+    required string id = 1;
+    required string title = 2;
+    required bool done = 3;
+}
+
+message TodoListProto {
+    option (scalapb.message).extends = "com.todolist.model.Proto";
+    required string id = 1;
+    required string name = 2;
+    repeated TaskProto tasks = 3;
+}
+
+message TodoListStateProto {
+    option (scalapb.message).extends = "com.todolist.model.Proto";
+    repeated TodoListProto todo = 1;
+}

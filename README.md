@@ -63,13 +63,28 @@ Considerations:
 * We will have to create a private function in the actor whose will manage the update of the state. This function will receive an `Event` defined previously and will return `Unit`.
 * We will have to handle the possible errors that we can encountered when we try to access to a non-existent todo list for example. When we encounter one error, we will log that error and we will continue with our execution. 
 
-### Add protobuf messages and serializers
+### Add protobuf messages, serializers and persistence in the actor 
 
-We have to create the protobuf messages and serializers for events and states.
+In this third step, we are going to focus in create the protobuf messages, serializers for events and states and change our actor in order to allow persitence using Akka Persitence 
 
-### Persistence and Snapshots
+To achieve this goal, we will be confident with akka-persistence reading this (documentation)[http://doc.akka.io/docs/akka/current/scala/persistence.html] and follow the next steps:
 
-Change our actor in order to allow persitence using Akka Persitence and configure the snapshot for improving the recovery of the actor.
+* Add to our reference.conf the serialization-bindings and serializers
+* All the events and state whose we want to persist will have a method called `toProto` that will returns a `Proto`
+* Create serializers for all the case class whose we want to persist. Those serializers have to extend from `SerializerWithStringManifest`
+* Create messages in protocol buffer. We recommend use the version 2.
+* After compile our project and check that works fine, the next step is add the proper config in the `resources.conf` related with the persistence.
+* Change our actor from `Actor` to `PersistanceActor`. After do that, we will have to change some methods in our class.
+
+After follow this steps, we will can stop and start our program. We will see that the state of our actors is the same after restart the execution.
+
+### Snapshots
+
+In this fourth step, we are going to configure the snapshot for improving the recovery of the actor.
+
+We will save a snapshot after update the state 5 times. In order to reduce recovery times of persistent actors and views.
+
+One recomendation is override the method `persist` to get it.
 
 ### Rest API
 
@@ -142,6 +157,10 @@ From the sbt console you can use:
 ```
 
 The will take you to next commit and step. Use groll prev if you want to go back. [More options here](https://github.com/sbt/sbt-groll#argumentsoptions)
+
+## Links
+
+https://scalapb.github.io/
 
 ## License
 

@@ -4,7 +4,7 @@
 		module="todolist-akka-training_2.12"
 		revision="0.0.1"
 		status="integration"
-		publication="20170801092052"
+		publication="20170803143153"
 	>
 		<description>
 		todolist-akka-training
@@ -43,6 +43,11 @@
 		<dependency org="com.typesafe.akka" name="akka-persistence-query_2.12" rev="2.5.3" conf="compile->default(compile)"/>
 		<dependency org="org.iq80.leveldb" name="leveldb" rev="0.7" conf="compile->default(compile)"/>
 		<dependency org="org.fusesource.leveldbjni" name="leveldbjni-all" rev="1.8" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-remote_2.12" rev="2.5.3" conf="compile->default(compile)"/>
+		<dependency org="io.circe" name="circe-core_2.12" rev="0.7.0" conf="compile->default(compile)"/>
+		<dependency org="io.circe" name="circe-java8_2.12" rev="0.7.0" conf="compile->default(compile)"/>
+		<dependency org="io.circe" name="circe-parser_2.12" rev="0.7.0" conf="compile->default(compile)"/>
+		<dependency org="io.circe" name="circe-generic-extras_2.12" rev="0.7.0" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-http-testkit_2.12" rev="10.0.9" conf="test->default(compile)"/>
 		<dependency org="org.scalatest" name="scalatest_2.12" rev="3.0.1" conf="test->default(compile)"/>
 	</dependencies>

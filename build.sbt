@@ -6,6 +6,7 @@ lazy val Versions = new {
   val scalatest = "3.0.1"
   val leveldb = "0.7"
   val leveldbjni = "1.8"
+  val circe = "0.7.0"
 }
 
 lazy val root = (project in file(".")).
@@ -24,6 +25,11 @@ lazy val root = (project in file(".")).
       "com.typesafe.akka" %% "akka-persistence-query" % Versions.akkaVersion,
       "org.iq80.leveldb" % "leveldb" % Versions.leveldb,
       "org.fusesource.leveldbjni" % "leveldbjni-all" % Versions.leveldbjni,
+      "com.typesafe.akka" %% "akka-remote" % Versions.akkaVersion,
+      "io.circe" %% "circe-core" % Versions.circe,
+      "io.circe" %% "circe-java8" % Versions.circe,
+      "io.circe" %% "circe-parser" % Versions.circe,
+      "io.circe" %% "circe-generic-extras" % Versions.circe,
       "com.trueaccord.scalapb" %% "scalapb-runtime" % scalapbVersion % "protobuf",
       "com.typesafe.akka" %% "akka-http-testkit" % Versions.akkaHttpVersion % Test,
       "org.scalatest" %% "scalatest" % Versions.scalatest % Test
