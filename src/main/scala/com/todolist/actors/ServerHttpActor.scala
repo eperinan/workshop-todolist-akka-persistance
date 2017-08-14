@@ -32,8 +32,8 @@ class ServerHttpActor extends Actor with ActorLogging {
   }
 
   def receive = {
-    case StartServer => {
-      val todoListRoutes = new TodoListRoutes
+    case StartServer(todoListActor) => {
+      val todoListRoutes = new TodoListRoutes(todoListActor)
       bindingFuture = Http().bindAndHandle(todoListRoutes.routes, config.getString("todolist-akka-training.hostname"), config.getInt("todolist-akka-training.port"))
       log.info(s"${self.path} Running ServerHttpActor")
     }

@@ -4,6 +4,8 @@ import akka.actor.ActorLogging
 import akka.persistence._
 import com.todolist.model._
 
+import scala.util.Failure
+
 class TodoListActor extends PersistentActor with ActorLogging {
 
   val snapShotInterval = 5
@@ -66,22 +68,39 @@ class TodoListActor extends PersistentActor with ActorLogging {
   }
 
   def receiveCommand = {
+    case GetToDoListsRequests() => {
+      log.info(s"${self.path} Returning todolist")
+      sender ! TodoListStateResponse(state.todo)
+    }
+    case GetToDoListsByIdRequests(todoListId) => {
+      log.info(s"${self.path} Returning todolist ${todoListId} ...")
+      if (state.todo.contains(todoListId)) {
+        val todoList = state.todo(todoListId)
+        sender ! TodoListResponse(todoList.id, todoList.name, todoList.tasks)
+      } else {
+        sender ! Failure(new IllegalArgumentException("Todolist not found"))
+      }
+    }
     case SaveSnapshotSuccess(metadata) => {
       log.info(s"${self.path} Notification save snapshot success")
     }
     case SaveSnapshotFailure(metadata, reason) => {
       log.info(s"${self.path} Notification save snapshot failure")
     }
-    case CreateTodoListCommand(todoListId: String, name: String) => {
+    case CreateTodoListCommand(name: String) => {
+      val todoListId = java.util.UUID.randomUUID.toString
       if (state.todo.contains(todoListId)) {
         // Notification
-        log.info(s"${self.path} Notification ${todoListId} already exist")
+        val message = s"${self.path} Notification ${todoListId} already exist"
+        log.info(message)
+        sender ! Failure(new IllegalArgumentException(message))
       } else {
         val event = TodoListCreatedEvent(todoListId, name)
         persist(event) { evt =>
           updateState(evt)
           // We should publish event but in this training we are not going to do it
           log.info(s"${self.path} Created ${todoListId} Todo List")
+          sender() ! evt
         }
       }
     }
@@ -92,14 +111,18 @@ class TodoListActor extends PersistentActor with ActorLogging {
           updateState(evt)
           // We should publish event but in this training we are not going to do it
           log.info(s"${self.path} Removed ${todoListId} Todo List")
+          sender() ! evt
         }
       } else {
         // Notification
-        log.info(s"${self.path} Notification ${todoListId} doesn´t exist")
+        val message = s"${self.path} Notification ${todoListId} doesn´t exist"
+        log.info(message)
+        sender ! Failure(new IllegalArgumentException(message))
       }
     }
-    case AddTaskCommand(todoListId: String, taskId: String, title: String) => {
+    case AddTaskCommand(todoListId: String, title: String) => {
       if (state.todo.contains(todoListId)) {
+        val taskId = java.util.UUID.randomUUID.toString
         if (state.todo(todoListId).tasks.contains(taskId)) {
           log.info(s"${self.path} Notification the Todo List ${todoListId} has a taskId with this id ${taskId}")
         } else {
@@ -108,11 +131,14 @@ class TodoListActor extends PersistentActor with ActorLogging {
             updateState(evt)
             // We should publish event but in this training we are not going to do it
             log.info(s"${self.path} Added task ${taskId} to ${todoListId} Todo List")
+            sender() ! evt
           }
         }
       } else {
         // Notification
-        log.info(s"${self.path} Notification the Todo List ${todoListId} doesn´t exist")
+        val message = s"${self.path} Notification the Todo List ${todoListId} doesn´t exist"
+        log.info(message)
+        sender ! Failure(new IllegalArgumentException(message))
       }
     }
     case DeleteTaskCommand(todoListId: String, taskId: String) => {
@@ -123,13 +149,19 @@ class TodoListActor extends PersistentActor with ActorLogging {
             updateState(evt)
             // We should publish event but in this training we are not going to do it
             log.info(s"${self.path} Removed task ${taskId} from ${todoListId} Todo List")
+            sender ! evt
           }
         } else {
-          log.info(s"${self.path} Notification the Todo List ${todoListId} doesn´ have a taskId with this id ${taskId}")
+          val message = s"${self.path} Notification the Todo List ${todoListId} doesn´ have a taskId with this id ${taskId}"
+          log.info(message)
+          sender ! Failure(new IllegalArgumentException(message))
+
         }
       } else {
         // Notification
-        log.info(s"${self.path} Notification the Todo List ${todoListId} doesn´t exist")
+        val message = s"${self.path} Notification the Todo List ${todoListId} doesn´t exist"
+        log.info(message)
+        sender ! Failure(new IllegalArgumentException(message))
       }
     }
     case CompleteTaskCommand(todoListId: String, taskId: String, done: Boolean) => {
@@ -140,13 +172,18 @@ class TodoListActor extends PersistentActor with ActorLogging {
             updateState(evt)
             // We should publish event but in this training we are not going to do it
             log.info(s"${self.path} Update status of the task ${taskId} from ${todoListId} Todo List")
+            sender ! evt
           }
         } else {
-          log.info(s"${self.path} Notification the Todo List ${todoListId} doesn´ have a taskId with this id ${taskId}")
+          val message = s"${self.path} Notification the Todo List ${todoListId} doesn´ have a taskId with this id ${taskId}"
+          log.info(message)
+          sender ! Failure(new IllegalArgumentException(message))
         }
       } else {
         // Notification
-        log.info(s"${self.path} Notification the Todo List ${todoListId} doesn´t exist")
+        val message = s"${self.path} Notification the Todo List ${todoListId} doesn´t exist"
+        log.info(message)
+        sender ! Failure(new IllegalArgumentException(message))
       }
     }
     case _ => {

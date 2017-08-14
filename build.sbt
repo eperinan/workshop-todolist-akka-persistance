@@ -7,6 +7,7 @@ lazy val Versions = new {
   val leveldb = "0.7"
   val leveldbjni = "1.8"
   val circe = "0.7.0"
+  val httpCirce = "1.17.0"
 }
 
 lazy val root = (project in file(".")).
@@ -29,6 +30,7 @@ lazy val root = (project in file(".")).
       "io.circe" %% "circe-core" % Versions.circe,
       "io.circe" %% "circe-java8" % Versions.circe,
       "io.circe" %% "circe-parser" % Versions.circe,
+      "de.heikoseeberger" %% "akka-http-circe" % Versions.httpCirce,
       "io.circe" %% "circe-generic-extras" % Versions.circe,
       "com.trueaccord.scalapb" %% "scalapb-runtime" % scalapbVersion % "protobuf",
       "com.typesafe.akka" %% "akka-http-testkit" % Versions.akkaHttpVersion % Test,

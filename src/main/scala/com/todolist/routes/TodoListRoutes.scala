@@ -1,10 +1,20 @@
 package com.todolist.routes
 
-import akka.http.scaladsl.model.StatusCodes
+import akka.actor.ActorRef
+import akka.http.scaladsl.model.{ HttpEntity, HttpResponse, StatusCodes }
 import akka.http.scaladsl.server.{ Directives, Route }
 import akka.util.Timeout
+import com.todolist.model.{ AddTaskTodoListRequestHttp, CompleteTaskRequestHttp, CreateTodoListRequestHttp }
+import com.todolist.services.TodoListService
+import de.heikoseeberger.akkahttpcirce.FailFastCirceSupport._
+import io.circe.generic.auto._
 
-class TodoListRoutes(implicit timeout: Timeout) extends Directives {
+import scala.concurrent.ExecutionContext
+import scala.util.{ Failure, Success }
+
+class TodoListRoutes(todoListActor: ActorRef)(implicit timeout: Timeout, ec: ExecutionContext) extends Directives {
+
+  val todoListService = new TodoListService(todoListActor)
 
   def routes: Route = {
     pathEndOrSingleSlash {
@@ -16,25 +26,95 @@ class TodoListRoutes(implicit timeout: Timeout) extends Directives {
     } ~ pathPrefix("todolist") {
       pathEnd {
         get {
-          complete("Ok")
+          val future = todoListService.GetTodoList()
+          onComplete(future) {
+            case Success(todoList) => todoList match {
+              case _ => {
+                complete(todoList)
+              }
+            }
+            case Failure(e) => {
+              complete(HttpResponse(StatusCodes.BadRequest, entity = HttpEntity(e.getMessage)))
+            }
+          }
         } ~ post {
-          complete("Creating todolist")
+          entity(as[CreateTodoListRequestHttp]) { request =>
+            val future = todoListService.CreateTodoList(request.name)
+            onComplete(future) {
+              case Success(todoList) => todoList match {
+                case _ => {
+                  complete(todoList)
+                }
+              }
+              case Failure(e) => {
+                complete(HttpResponse(StatusCodes.BadRequest, entity = HttpEntity(e.getMessage)))
+              }
+            }
+          }
         }
       } ~ pathPrefix(Segment) { todoListId =>
         get {
-          complete(todoListId)
+          val future = todoListService.GetToDoListsById(todoListId)
+          onComplete(future) {
+            case Success(todoList) => todoList match {
+              case _ => {
+                complete(todoList)
+              }
+            }
+            case Failure(e) => {
+              complete(HttpResponse(StatusCodes.BadRequest, entity = HttpEntity(e.getMessage)))
+            }
+          }
         } ~ pathPrefix("task") {
           post {
-            complete("Create task")
+            entity(as[AddTaskTodoListRequestHttp]) { request =>
+              val future = todoListService.AddTaskTodoList(todoListId, request.title)
+              onComplete(future) {
+                case Success(task) => task match {
+                  case _ => {
+                    complete(task)
+                  }
+                }
+                case Failure(e) => {
+                  complete(HttpResponse(StatusCodes.BadRequest, entity = HttpEntity(e.getMessage)))
+                }
+              }
+            }
           } ~ pathPrefix(Segment) { taskId =>
             put {
-              complete("Update task")
+              entity(as[CompleteTaskRequestHttp]) { request =>
+                val future = todoListService.CompleteTaskById(todoListId, taskId, request.done)
+                onComplete(future) {
+                  case Success(_) => {
+                    complete(StatusCodes.OK)
+                  }
+                  case Failure(e) => {
+                    complete(HttpResponse(StatusCodes.BadRequest, entity = HttpEntity(e.getMessage)))
+                  }
+                }
+              }
             } ~ delete {
-              complete("Delete task")
+              val future = todoListService.DeleteTaskById(todoListId, taskId)
+              onComplete(future) {
+                case Success(_) => {
+                  complete(StatusCodes.OK)
+                }
+                case Failure(e) => {
+                  complete(HttpResponse(StatusCodes.BadRequest, entity = HttpEntity(e.getMessage)))
+                }
+              }
             }
           }
         } ~ delete {
-          complete("Delete todolistid")
+          val future = todoListService.DeleteToDoListsById(todoListId)
+          onComplete(future) {
+            case Success(_) => {
+              complete(StatusCodes.OK)
+            }
+            case Failure(e) => {
+              complete(HttpResponse(StatusCodes.BadRequest, entity = HttpEntity(e.getMessage)))
+            }
+          }
         }
       }
     }
