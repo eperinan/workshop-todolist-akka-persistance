@@ -3,8 +3,8 @@ package com.todolist.actors
 import akka.actor.ActorLogging
 import akka.persistence._
 import com.todolist.model._
-
 import scala.util.Failure
+import java.time.{ Instant, LocalDateTime }
 
 class TodoListActor extends PersistentActor with ActorLogging {
 
@@ -15,25 +15,25 @@ class TodoListActor extends PersistentActor with ActorLogging {
 
   private def updateState(event: Event): Unit = {
     event match {
-      case TodoListCreatedEvent(todoListId: String, name: String) => {
-        state = TodoListState(state.todo + (todoListId -> TodoList(todoListId, name, Map())))
+      case TodoListCreatedEvent(todoListId, name, date) => {
+        state = TodoListState(state.todo + (todoListId -> TodoList(todoListId, name, Map(), date)))
       }
       case TodoListDeletedEvent(todoListId: String) => {
         state = TodoListState(state.todo - todoListId)
       }
-      case TaskAddedEvent(todoListId, taskId, title) => {
-        val tasksUpdated = state.todo(todoListId).tasks + (taskId -> Task(taskId, title, false))
-        val todoListUpdated = TodoList(todoListId, state.todo(todoListId).name, tasksUpdated)
+      case TaskAddedEvent(todoListId, taskId, title, date) => {
+        val tasksUpdated = state.todo(todoListId).tasks + (taskId -> Task(taskId, title, false, date))
+        val todoListUpdated = TodoList(todoListId, state.todo(todoListId).name, tasksUpdated, date)
         state = TodoListState(state.todo updated (todoListId, todoListUpdated))
       }
       case TaskDeletedEvent(todoListId, taskId) => {
         val tasksUpdated = state.todo(todoListId).tasks - taskId
-        val todoListUpdated = TodoList(todoListId, state.todo(todoListId).name, tasksUpdated)
+        val todoListUpdated = TodoList(todoListId, state.todo(todoListId).name, tasksUpdated, state.todo(todoListId).date)
         state = TodoListState(state.todo updated (todoListId, todoListUpdated))
       }
       case TaskCompletedEvent(todoListId, taskId, done) => {
-        val tasksUpdated = state.todo(todoListId).tasks updated (taskId, Task(taskId, state.todo(todoListId).tasks(taskId).title, done))
-        val todoListUpdated = TodoList(todoListId, state.todo(todoListId).name, tasksUpdated)
+        val tasksUpdated = state.todo(todoListId).tasks updated (taskId, Task(taskId, state.todo(todoListId).tasks(taskId).title, done, state.todo(todoListId).date))
+        val todoListUpdated = TodoList(todoListId, state.todo(todoListId).name, tasksUpdated, state.todo(todoListId).date)
         state = TodoListState(state.todo updated (todoListId, todoListUpdated))
       }
       case _ => log.info(s"Updated state")
@@ -89,13 +89,14 @@ class TodoListActor extends PersistentActor with ActorLogging {
     }
     case CreateTodoListCommand(name: String) => {
       val todoListId = java.util.UUID.randomUUID.toString
+      val date = Instant.now().toEpochMilli()
       if (state.todo.contains(todoListId)) {
         // Notification
         val message = s"${self.path} Notification ${todoListId} already exist"
         log.info(message)
         sender ! Failure(new IllegalArgumentException(message))
       } else {
-        val event = TodoListCreatedEvent(todoListId, name)
+        val event = TodoListCreatedEvent(todoListId, name, date)
         persist(event) { evt =>
           updateState(evt)
           // We should publish event but in this training we are not going to do it
@@ -123,10 +124,11 @@ class TodoListActor extends PersistentActor with ActorLogging {
     case AddTaskCommand(todoListId: String, title: String) => {
       if (state.todo.contains(todoListId)) {
         val taskId = java.util.UUID.randomUUID.toString
+        val date = Instant.now().toEpochMilli()
         if (state.todo(todoListId).tasks.contains(taskId)) {
           log.info(s"${self.path} Notification the Todo List ${todoListId} has a taskId with this id ${taskId}")
         } else {
-          val event = TaskAddedEvent(todoListId, taskId, title)
+          val event = TaskAddedEvent(todoListId, taskId, title, date)
           persist(event) { evt =>
             updateState(evt)
             // We should publish event but in this training we are not going to do it

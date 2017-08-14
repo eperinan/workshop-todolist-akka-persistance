@@ -6,18 +6,19 @@ sealed trait Event {
   def toProto: Proto
 }
 
-case class TodoListCreatedEvent(todoListId: String, name: String) extends Event {
+case class TodoListCreatedEvent(todoListId: String, name: String, date: Long) extends Event {
   override def toProto: Proto = {
     TodoListCreatedEventProto(
       todoListId = todoListId,
-      name = name
+      name = name,
+      date = date
     )
   }
 }
 
 object TodoListCreatedEvent {
   def apply(proto: TodoListCreatedEventProto): TodoListCreatedEvent = {
-    TodoListCreatedEvent(todoListId = proto.todoListId, name = proto.name)
+    TodoListCreatedEvent(todoListId = proto.todoListId, name = proto.name, date = proto.date)
   }
 
   def apply(bytes: Array[Byte]): TodoListCreatedEvent = {
@@ -43,19 +44,20 @@ object TodoListDeletedEvent {
   }
 }
 
-case class TaskAddedEvent(todoListId: String, taskId: String, title: String) extends Event {
+case class TaskAddedEvent(todoListId: String, taskId: String, title: String, date: Long) extends Event {
   override def toProto: Proto = {
     TaskAddedEventProto(
       todoListId = todoListId,
       taskId = taskId,
-      title = title
+      title = title,
+      date = date
     )
   }
 }
 
 object TaskAddedEvent {
   def apply(proto: TaskAddedEventProto): TaskAddedEvent = {
-    TaskAddedEvent(todoListId = proto.todoListId, taskId = proto.taskId, title = proto.title)
+    TaskAddedEvent(todoListId = proto.todoListId, taskId = proto.taskId, title = proto.title, date = proto.date)
   }
 
   def apply(bytes: Array[Byte]): TaskAddedEvent = {

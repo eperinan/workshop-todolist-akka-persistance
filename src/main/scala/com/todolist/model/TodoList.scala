@@ -17,7 +17,7 @@ case class TodoListState(todo: Map[String, TodoList]) extends State {
 object TodoListState {
   def apply(proto: TodoListStateProto): TodoListState = {
     TodoListState(
-      todo = proto.todo.map(item => item.id -> TodoList(item.id, item.name, item.tasks.map(task => task.id -> Task(task)) toMap)) toMap
+      todo = proto.todo.map(item => item.id -> TodoList(item.id, item.name, item.tasks.map(task => task.id -> Task(task)) toMap, item.date)) toMap
     )
   }
 
@@ -26,15 +26,15 @@ object TodoListState {
   }
 }
 
-case class Task(id: String, title: String, done: Boolean) extends State {
+case class Task(id: String, title: String, done: Boolean, date: Long) extends State {
   override def toProto: TaskProto = {
-    TaskProto(id = id, title = title, done = done)
+    TaskProto(id = id, title = title, done = done, date = date)
   }
 }
 
 object Task {
   def apply(proto: TaskProto): Task = {
-    Task(id = proto.id, title = proto.title, done = proto.done)
+    Task(id = proto.id, title = proto.title, done = proto.done, date = proto.date)
   }
 
   def apply(bytes: Array[Byte]): Task = {
@@ -42,12 +42,13 @@ object Task {
   }
 }
 
-case class TodoList(id: String, name: String, tasks: Map[String, Task]) extends State {
+case class TodoList(id: String, name: String, tasks: Map[String, Task], date: Long) extends State {
   override def toProto: TodoListProto = {
     TodoListProto(
       id = id,
       name = name,
-      tasks = tasks.values.map(_.toProto) toList
+      tasks = tasks.values.map(_.toProto) toList,
+      date = date
     )
   }
 }
@@ -57,7 +58,8 @@ object TodoList {
     TodoList(
       id = proto.id,
       name = proto.name,
-      tasks = proto.tasks.map(task => task.id -> Task(task)) toMap
+      tasks = proto.tasks.map(task => task.id -> Task(task)) toMap,
+      date = proto.date
     )
   }
 

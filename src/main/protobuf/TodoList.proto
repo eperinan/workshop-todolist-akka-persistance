@@ -10,6 +10,7 @@ message TodoListCreatedEventProto {
     option (scalapb.message).extends = "com.todolist.model.Proto";
     required string todoListId = 1;
     required string name = 2;
+    required int64 date = 3;
 }
 
 message TodoListDeletedEventProto {
@@ -22,6 +23,8 @@ message TaskAddedEventProto {
     required string todoListId = 1;
     required string taskId = 2;
     required string title = 3;
+    required int64 date = 4;
+
 }
 
 message TaskCompletedEventProto {
@@ -43,6 +46,7 @@ message TaskProto {
     required string id = 1;
     required string title = 2;
     required bool done = 3;
+    required int64 date = 4;
 }
 
 message TodoListProto {
@@ -50,6 +54,7 @@ message TodoListProto {
     required string id = 1;
     required string name = 2;
     repeated TaskProto tasks = 3;
+    required int64 date = 4;
 }
 
 message TodoListStateProto {
