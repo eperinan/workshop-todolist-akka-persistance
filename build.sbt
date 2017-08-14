@@ -41,3 +41,5 @@ lazy val root = (project in file(".")).
 PB.targets in Compile := Seq(
   scalapb.gen() -> (sourceManaged in Compile).value
 )
+
+coverageEnabled := true
