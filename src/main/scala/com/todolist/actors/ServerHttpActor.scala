@@ -10,9 +10,6 @@ import com.todolist.model.StartServer
 import com.todolist.routes.TodoListRoutes
 import com.typesafe.config.ConfigFactory
 
-import scala.concurrent.{ Await, Future }
-import scala.concurrent.duration.Duration
-
 class ServerHttpActor extends Actor with ActorLogging {
 
   implicit val system = context.system
@@ -21,7 +18,6 @@ class ServerHttpActor extends Actor with ActorLogging {
   implicit val timeout = Timeout(5, TimeUnit.SECONDS)
 
   val config = ConfigFactory.load()
-  var bindingFuture: Future[Http.ServerBinding] = Future.never
 
   override def preStart() = {
     log.info(s"${self.path} Starting ServerHttpActor ...")
@@ -34,11 +30,9 @@ class ServerHttpActor extends Actor with ActorLogging {
   def receive = {
     case StartServer(todoListActor) => {
       val todoListRoutes = new TodoListRoutes(todoListActor)
-      bindingFuture = Http().bindAndHandle(todoListRoutes.routes, config.getString("todolist-akka-training.hostname"), config.getInt("todolist-akka-training.port"))
+      Http().bindAndHandle(todoListRoutes.routes, config.getString("todolist-akka-training.hostname"), config.getInt("todolist-akka-training.port"))
       log.info(s"${self.path} Running ServerHttpActor")
     }
   }
-
-  override def postStop(): Unit = Await.result(bindingFuture.flatMap(_.unbind()), Duration.Inf)
 
 }

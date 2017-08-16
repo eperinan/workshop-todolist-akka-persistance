@@ -8,13 +8,16 @@ lazy val Versions = new {
   val leveldbjni = "1.8"
   val circe = "0.7.0"
   val httpCirce = "1.17.0"
+  val akkaMock = "1.1.1"
 }
+
+resolvers += Resolver.jcenterRepo
 
 lazy val root = (project in file(".")).
   settings(
     inThisBuild(List(
       organization := "com.todolist",
-      scalaVersion := "2.12.3",
+      scalaVersion := "2.11.8",
       version := "0.0.1"
     )),
     name := "todolist-akka-training",
@@ -34,12 +37,15 @@ lazy val root = (project in file(".")).
       "io.circe" %% "circe-generic-extras" % Versions.circe,
       "com.trueaccord.scalapb" %% "scalapb-runtime" % scalapbVersion % "protobuf",
       "com.typesafe.akka" %% "akka-http-testkit" % Versions.akkaHttpVersion % Test,
-      "org.scalatest" %% "scalatest" % Versions.scalatest % Test
+      "org.scalatest" %% "scalatest" % Versions.scalatest % Test,
+      "org.dmonix.akka" % "akka-persistence-mock_2.11" % Versions.akkaMock
     )
   )
 
 PB.targets in Compile := Seq(
   scalapb.gen() -> (sourceManaged in Compile).value
 )
+
+fork := true
 
 coverageEnabled := true
