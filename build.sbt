@@ -49,3 +49,4 @@ PB.targets in Compile := Seq(
 fork := true
 
 coverageEnabled := true
+coverageExcludedPackages := ".*Proto.scala"

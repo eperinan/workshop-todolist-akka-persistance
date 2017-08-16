@@ -96,7 +96,13 @@ We are gonna create a new field called **date** in **Task** and **ToDoList** mod
 
 ### Testing
 
-Create tests for protobuf conversions and actors
+We are going to ¡create tests for the serializers, the models and the actors.
+
+We will need to use another plugin to persist the data of actors. 
+
+We recommend use the plugin akka-persistance-mock for example.
+
+It is interesting you add some plugin to check the coverage of the application.
 
 ## API
 

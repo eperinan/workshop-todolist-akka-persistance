@@ -36,10 +36,6 @@ object Task {
   def apply(proto: TaskProto): Task = {
     Task(id = proto.id, title = proto.title, done = proto.done, date = proto.date)
   }
-
-  def apply(bytes: Array[Byte]): Task = {
-    Task(TaskProto.parseFrom(bytes))
-  }
 }
 
 case class TodoList(id: String, name: String, tasks: Map[String, Task], date: Long) extends State {
@@ -61,9 +57,5 @@ object TodoList {
       tasks = proto.tasks.map(task => task.id -> Task(task)) toMap,
       date = proto.date
     )
-  }
-
-  def apply(bytes: Array[Byte]): TodoList = {
-    TodoList(TodoListProto.parseFrom(bytes))
   }
 }
