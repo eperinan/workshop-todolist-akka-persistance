@@ -1,7 +1,7 @@
 package com.todolist.services
 
 import akka.actor.ActorRef
-import com.todolist.model._
+import com.todolist.models._
 import akka.pattern.ask
 import akka.util.Timeout
 

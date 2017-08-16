@@ -2,7 +2,7 @@ package com.todolist.actors
 
 import akka.actor.ActorLogging
 import akka.persistence._
-import com.todolist.model._
+import com.todolist.models._
 import scala.util.Failure
 import java.time.{ Instant, LocalDateTime }
 

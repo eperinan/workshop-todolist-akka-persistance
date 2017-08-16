@@ -1,7 +1,7 @@
-package com.todolist.serializer
+package com.todolist.serializers
 
 import akka.serialization.SerializerWithStringManifest
-import com.todolist.model._
+import com.todolist.models._
 
 class EventSerializer extends SerializerWithStringManifest {
 

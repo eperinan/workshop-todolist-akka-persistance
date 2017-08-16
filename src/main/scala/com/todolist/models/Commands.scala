@@ -1,4 +1,4 @@
-package com.todolist.model
+package com.todolist.models
 
 import akka.actor.ActorRef
 

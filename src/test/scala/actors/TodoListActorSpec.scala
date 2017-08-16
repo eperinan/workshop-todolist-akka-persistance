@@ -1,14 +1,15 @@
-package com.todolist.test
+package actors
 
 import akka.actor.{ ActorSystem, Props }
 import akka.testkit.{ ImplicitSender, TestKit }
 import com.todolist.actors.TodoListActor
-import com.todolist.model._
+import com.todolist.models._
+import com.todolist.test.PersistenceSuite
 import org.scalatest.{ BeforeAndAfterAll, Matchers, WordSpecLike }
 
 import scala.concurrent.duration._
 
-class MySpec() extends TestKit(ActorSystem("MySpec", PersistenceSuite.config)) with ImplicitSender
+class TodoListActorSpec() extends TestKit(ActorSystem("MySpec", PersistenceSuite.config)) with ImplicitSender
     with WordSpecLike with Matchers with BeforeAndAfterAll {
 
   val myTimeout = 3 seconds

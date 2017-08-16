@@ -1,4 +1,4 @@
-package com.todolist.model
+package com.todolist.models
 
 import com.todolist.protobuf.TodoList.{ TodoListStateProto, TaskProto, TodoListProto }
 

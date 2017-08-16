@@ -6,7 +6,7 @@ import akka.actor.{ Actor, ActorLogging }
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
 import akka.util.Timeout
-import com.todolist.model.StartServer
+import com.todolist.models.StartServer
 import com.todolist.routes.TodoListRoutes
 import com.typesafe.config.ConfigFactory
 

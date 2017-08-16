@@ -1,4 +1,4 @@
-package com.todolist.model
+package com.todolist.models
 
 sealed trait Response
 

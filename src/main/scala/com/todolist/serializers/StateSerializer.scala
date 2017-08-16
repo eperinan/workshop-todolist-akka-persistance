@@ -1,7 +1,7 @@
-package com.todolist.serializer
+package com.todolist.serializers
 
 import akka.serialization.SerializerWithStringManifest
-import com.todolist.model.TodoListState
+import com.todolist.models.TodoListState
 
 class StateSerializer extends SerializerWithStringManifest {
 

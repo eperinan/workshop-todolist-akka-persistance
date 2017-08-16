@@ -4,7 +4,7 @@ import akka.actor.ActorRef
 import akka.http.scaladsl.model.{ HttpEntity, HttpResponse, StatusCodes }
 import akka.http.scaladsl.server.{ Directives, Route }
 import akka.util.Timeout
-import com.todolist.model.{ AddTaskTodoListRequestHttp, CompleteTaskRequestHttp, CreateTodoListRequestHttp }
+import com.todolist.models.{ AddTaskTodoListRequestHttp, CompleteTaskRequestHttp, CreateTodoListRequestHttp }
 import com.todolist.services.TodoListService
 import de.heikoseeberger.akkahttpcirce.FailFastCirceSupport._
 import io.circe.generic.auto._

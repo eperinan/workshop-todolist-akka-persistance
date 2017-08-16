@@ -3,7 +3,7 @@ package com.todolist
 import akka.actor.{ ActorSystem, Props }
 import akka.http.scaladsl.server.Directives
 import com.todolist.actors.{ ServerHttpActor, TodoListActor }
-import com.todolist.model._
+import com.todolist.models._
 
 object Boot extends Directives {
   def main(args: Array[String]) {
