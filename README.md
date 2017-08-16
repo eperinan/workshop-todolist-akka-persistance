@@ -2,7 +2,7 @@
 
 Repository with my solution for a private training of 47deg related with Akka persistent, EventSourcing and API Rest.
 
-In this training I am using Scala, AKKA (http, actor, persistent), Circe, ProtocolBuffer and LevelDB.
+In this training I am using Scala, Akka (http, actor, persistent), Circe, ProtocolBuffer and LevelDB.
 
 To run the application:
 
