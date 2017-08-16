@@ -1,0 +1,115 @@
+{
+	"variables": [],
+	"info": {
+		"name": "TodoList Training Akka",
+		"_postman_id": "9b9f01f9-65f6-ef15-8b5b-5b1e3f242e67",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get ToDoLists",
+			"request": {
+				"url": "http://localhost:8080/todolist",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Reports the health of the application."
+			},
+			"response": []
+		},
+		{
+			"name": "Get ToDoList by Id",
+			"request": {
+				"url": "http://localhost:8080/todolist/88ec1425-d7c1-45c7-8582-594fe5a14b3d",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Reports the health of the application."
+			},
+			"response": []
+		},
+		{
+			"name": "Create ToDoList",
+			"request": {
+				"url": "http://localhost:8080/todolist",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Test 2\"\n}"
+				},
+				"description": "Reports the health of the application."
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"url": "http://localhost:8080/todolist/88ec1425-d7c1-45c7-8582-594fe5a14b3d/task",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"My task new\"\n}"
+				},
+				"description": "Reports the health of the application."
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"url": "http://localhost:8080/todolist/88ec1425-d7c1-45c7-8582-594fe5a14b3d/task/e6b7e636-93dd-473f-9b43-a59cf6be7180",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"done\": true\n}"
+				},
+				"description": "Reports the health of the application."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"url": "http://localhost:8080/todolist/88ec1425-d7c1-45c7-8582-594fe5a14b3d/task/e6b7e636-93dd-473f-9b43-a59cf6be7180",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": "Reports the health of the application."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete ToDoList",
+			"request": {
+				"url": "http://localhost:8080/todolist/88ec1425-d7c1-45c7-8582-594fe5a14b3d",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": "Reports the health of the application."
+			},
+			"response": []
+		}
+	]
+}
